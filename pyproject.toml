@@ -1,0 +1,28 @@
+[project]
+name = "import-linter-dependency-graph"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Noah Zuch", email = "noah.zuch@qaware.de" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "import-linter>=2.5.2",
+]
+
+[build-system]
+requires = ["uv_build>=0.9.3,<0.10.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "mypy>=1.18.2",
+    "pytest>=8.4.2",
+    "ruff>=0.14.1",
+]
+
+[tool.pytest.ini_options]
+pythonpath = [
+    "src,."
+]
